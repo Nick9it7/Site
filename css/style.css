@@ -1,0 +1,15 @@
+.menu {
+	font-size: 17px;
+}
+.form-content {
+	background-color:#f0f0f0;
+	border:1px solid #9b9b9b;
+	border-radius:5px;
+}
+.h3-add {
+	margin: 20px;
+}
+.form-group {
+	width: 500px;
+	padding-left: 20px;
+}

@@ -8,6 +8,7 @@
     <title>Головна</title>
 
     <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/style.css">
     <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -18,8 +19,19 @@
     <![endif]-->
   </head>
   <body>
-    
-
+    <div class="container-fluid">
+    	<div class="row">
+    		<h1 class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-xs-offset-2">Довідник PHP</h1>
+    		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="navbar navbar-inverse">
+                    <ul class="nav navbar-nav">
+                        <li class="col-md-push-2 col-lg-push-3 col-sm-push-1 col-xs-push-1 menu"><a class="glyphicon glyphicon-home" href="index.php"> Головна</a></li>
+                        <li class="col-md-push-2 col-lg-push-3 col-sm-push-1 col-xs-push-1 menu"><a class="glyphicon glyphicon-plus" href="articles_form.php"> Добавити статтю</a></li>
+                    </ul>
+                </div>
+    		</div>
+    	</div>
+    </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
