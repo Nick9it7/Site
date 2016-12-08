@@ -8,8 +8,9 @@
     <title>Статті</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link href="css/bootstrap.css" rel="stylesheet">
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -35,7 +36,7 @@
     <div class="container">
       <div class="row form-content">
         <h3 class="h3-add">Додавання статті</h3>
-        <form action="db.php" method="post" name="Create article">
+        <form action="db.php" method="post" name="Create article" enctype="multipart/form-data" class="col-lg-7 col-md-7 col-sm-9 col-xs-12">
           <div class="form-group">
             <label>Назва статті</label>
             <input name="title" type="text" class="form-control" placeholder="Введіть назву статті">
@@ -57,18 +58,57 @@
             <input type="text" name="meta_key" class="form-control" placeholder="">
           </div>
           <div class="form-group">
-            <input type="file" min="1" max="9999" name="file[]" multiple="true"/>
-            <p class="help-block">Можна вибирати декілька файлів</p>
+            <input type="file" name="uploadfile"/>
+            <p class="help-block">Виберіть картинку для статті</p>
           </div>
           <div class="form-group">
-            <button id="butt1" type="submit" class="btn btn-success">Отправить</button>
+            <button id="butt1" type="submit" class="btn btn-success">Добавити</button>
           </div>
         </form>
       </div>
     </div>
-    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      $("#butt1").click(function() {
+        var strRes = "Ви не заповнили усі поля";
+        var check = new Array();
+
+        $(":text, textarea, [type='file']").each(function(i) {
+          if ($(this).val() == "") {
+            $(this).parent("div").addClass("has-error");
+            $("button").addClass("btn btn-danger");
+            check[i] = false;
+          }
+          else {
+            $(this).parent("div").removeClass("has-error");
+            $(this).parent("div").addClass("has-success");
+            check[i] = true;
+          }
+        });
+
+        var checked = true;;
+        for (var i = 0; i < check.length; i++) {
+          if(!check[i]) {
+            checked = false;
+          }
+        }
+
+        if (checked) {
+          $("button").removeClass("btn btn-danger"); 
+          $("button").addClass("btn btn-success");
+        }
+        else {
+          alert(strRes);
+        }
+
+        return checked;
+      });
+      
+
+
+
+    </script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.js"></script>
   </body>
