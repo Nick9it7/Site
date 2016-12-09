@@ -1,6 +1,7 @@
 <?php
 	include 'db.php';
 	$startFrom = $_POST['startFrom'];
-	$res = select("SELECT * FROM `list_article` ORDER BY `date` DESC LIMIT  10,10");
+	$query = sprintf("SELECT * FROM `list_article` ORDER BY `date` DESC LIMIT  %d,10;", $startFrom);
+	$res = select($query);
 	echo json_encode($res);
 ?>
