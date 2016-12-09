@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Статті</title>
+    <title>Добавити статтю</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/styles.css">
@@ -36,7 +36,7 @@
     <div class="container">
       <div class="row form-content">
         <h3 class="h3-add">Додавання статті</h3>
-        <form action="db.php" method="post" name="Create article" enctype="multipart/form-data" class="col-lg-7 col-md-7 col-sm-9 col-xs-12">
+        <form action="insertToDb.php" method="post" name="Create article" enctype="multipart/form-data" class="col-lg-7 col-md-7 col-sm-9 col-xs-12">
           <div class="form-group">
             <label>Назва статті</label>
             <input name="title" type="text" class="form-control" placeholder="Введіть назву статті">
@@ -48,14 +48,6 @@
           <div class="form-group">
             <label>Текст статті</label>
             <textarea name="text" class="form-control" placeholder="Текст..."></textarea>
-          </div>
-          <div class="form-group">
-            <label>Ключовий опис</label>
-            <input type="text" name="meta_desc" class="form-control" placeholder="">
-          </div>
-          <div class="form-group">
-            <label>Ключові слові</label>
-            <input type="text" name="meta_key" class="form-control" placeholder="">
           </div>
           <div class="form-group">
             <input type="file" name="uploadfile"/>
