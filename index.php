@@ -9,9 +9,10 @@
     <title>Головна</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="st.css" rel="stylesheet">
+    <link href="styl.css" rel="stylesheet">
+    
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,10 +40,19 @@
             <?php
                 $articles = select("SELECT * FROM `list_article` ORDER BY `date` DESC LIMIT 10");
                 foreach ($articles as $article):
+                $image = $article['src'];
             ?>
-            <p><b><?php echo $article['title']; ?></b><br />
-            <?php echo $article['text_article']; ?></p>
-            <?php endforeach; ?>
+            <div class="col-md-3 col-md-offset-1 col-sm-5 col-lg-3 bloc">
+                <a class="block_a" href="shablon.php?id=<?php echo $article['id'] ?>">
+                        <h4><?php echo $article['title']; ?></h4>
+                        <div style="background-image: url(<?php echo $image ?>);"></div>
+                        <p>
+                            <?php echo $article['text_article']; ?></p>
+                        </p>
+                </a>
+            </div>
+            
+            <?php endforeach; ?>        
         </div>
     </div>
     <div id = "toTop" class="navbar navbar-inverse" > 

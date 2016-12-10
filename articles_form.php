@@ -47,7 +47,7 @@
           </div>
           <div class="form-group">
             <label>Текст статті</label>
-            <textarea name="text" class="form-control" placeholder="Текст..."></textarea>
+            <textarea name="text" class="form-control" placeholder="Текст..." rows="6"></textarea>
           </div>
           <div class="form-group">
             <input type="file" name="uploadfile"/>
@@ -97,9 +97,6 @@
         return checked;
       });
       
-
-
-
     </script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.js"></script>

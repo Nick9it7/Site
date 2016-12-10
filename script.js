@@ -14,11 +14,11 @@ var startFrom = 10;
                 }).done(function(data){
 
                 data = jQuery.parseJSON(data);
-
-                //console.log(data);
+console.log(data);
                 if (data.length > 0) {
                         $.each(data, function(index, data){
-                            $("#articles").append("<p><b>" + data.title + "</b><br />" + data.text_article + "</p>");
+                            $("#articles").append("<div class='col-md-3 col-md-offset-1 col-sm-5 col-lg-3 bloc'><a class='block_a' href='shablon.php?id=" + data.id + "'><h4>" + data.title 
+                                + "</h4> <div style='background-image: url(" + data.src + ");'></div><p>" + data.text_article + "</p></a></div>");
                             console.log(data);
                     });
 
