@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="ua">
   <head>
-    <?php require_once "db.php" ?>
+    <?php 
+        require_once "db.php";
+        $id = $_GET['id'];
+        $query = "SELECT * FROM `list_article` WHERE `id` = '$id'";
+        $article = select($query);
+    ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Головна</title>
+    <title><? echo $article[0]['title'] ?></title>
 
     <!-- Bootstrap -->
-
+    <link rel="stylesheet" href="css/style.css">
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+
     
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -36,23 +41,13 @@
     	</div>
     </div>
     <div class="container">
-        <div class="row form-content" id="articles">
-            <?php
-                $articles = select("SELECT * FROM `list_article` ORDER BY `date` DESC LIMIT 9");
-                foreach ($articles as $article):
-                $image = $article['src'];
-            ?>
-            <div class="col-md-3 col-md-offset-1 col-sm-5 col-lg-3 bloc">
-                <a class="block_a" href="shablon.php?id=<?php echo $article['id'] ?>">
-                        <h4><?php echo $article['title']; ?></h4>
-                        <div style="background-image: url(<?php echo $image ?>);"></div>
-                        <p>
-                            <?php echo $article['text_article']; ?></p>
-                        </p>
-                </a>
+        <div class="row">
+            <div class="content">
+                <h3><? echo $article[0]['title'] ?></h3>
+                <p class="data"><? echo date("d F Y, H:i A",$article[0]['date']) ?></p>
+                <img class="pull-right img-thumbnail img" src="<? echo $article[0]['src'] ?>">
+                <pre class="text"><? echo htmlspecialchars_decode($article[0]['text_article']) ?></pre>
             </div>
-            
-            <?php endforeach; ?>        
         </div>
     </div>
     <div id = "toTop" class="navbar navbar-inverse" > 

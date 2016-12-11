@@ -9,3 +9,68 @@
 .h3-add {
 	margin: 20px;
 }
+#toTop {
+	position:fixed;
+	bottom: 10px;
+	right:10px;
+	display:none;
+}
+
+.bloc {
+	background-color: #f9f9f9;
+	border: 1px solid;
+	border-color: rgb(155,155,155);
+	border-radius: 5px;
+	margin-top: 15px;
+	height: 280px;
+	overflow: hidden;
+}
+.col-md-offset-1 {
+	margin-left: 6.333333%;
+}
+
+.bloc div {
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 150px;
+}
+.bloc p {
+	text-align: justify;
+	text-indent: 1.5em;
+	margin: 5px 0;
+}
+.block_a {
+	color: #000;
+}
+.block_a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+.content {
+	background-color:#f0f0f0;
+	border:1px solid #9b9b9b;
+	border-radius:5px;
+	text-indent: 30px;
+}
+.text {
+	white-space: pre-wrap;
+	background: none;
+	border: none;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	word-break: normal;
+	padding: 0 20px;
+	text-align: justify;
+}
+.content h3 {
+	text-indent: 27px;
+	margin-bottom: 0;
+}
+.data {
+	font-size: small;
+	color: silver;
+}
+.img {
+	margin-right: 15px;
+}

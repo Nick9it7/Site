@@ -8,7 +8,7 @@
     <title>Добавити статтю</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="css/bootstrap.css" rel="stylesheet">
 
 

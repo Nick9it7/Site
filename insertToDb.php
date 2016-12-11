@@ -42,7 +42,7 @@
 			function loadFile() {
 
 				$title = $_POST['title'];
-				$description = htmlspecialchars($_POST['description']);
+				$description = $_POST['description'];
 				$text = htmlspecialchars($_POST['text']);
 				$date = time();
 
