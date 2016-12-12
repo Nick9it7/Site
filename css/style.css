@@ -51,7 +51,7 @@
 	background-color:#f0f0f0;
 	border:1px solid #9b9b9b;
 	border-radius:5px;
-	text-indent: 30px;
+	padding: 0 0 20px 20px;
 }
 .text {
 	white-space: pre-wrap;
@@ -60,17 +60,18 @@
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 15px;
 	word-break: normal;
-	padding: 0 20px;
 	text-align: justify;
 }
 .content h3 {
-	text-indent: 27px;
+	margin-left: 40px;
 	margin-bottom: 0;
 }
 .data {
 	font-size: small;
 	color: silver;
+	margin-left: 40px;
 }
 .img {
-	margin-right: 15px;
+	margin: 15px;
+	margin-top: 0;
 }

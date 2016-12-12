@@ -13,7 +13,8 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -47,7 +48,7 @@
                         <h4><?php echo $article['title']; ?></h4>
                         <div style="background-image: url(<?php echo $image ?>);"></div>
                         <p>
-                            <?php echo $article['text_article']; ?></p>
+                            <?php echo $article['description']; ?></p>
                         </p>
                 </a>
             </div>
@@ -61,8 +62,6 @@
         </ul>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript">
         $(function() {
             $(window).scroll(function() { 

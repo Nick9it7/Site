@@ -46,7 +46,7 @@
                 <h3><? echo $article[0]['title'] ?></h3>
                 <p class="data"><? echo date("d F Y, H:i A",$article[0]['date']) ?></p>
                 <img class="pull-right img-thumbnail img" src="<? echo $article[0]['src'] ?>">
-                <pre class="text"><? echo htmlspecialchars_decode($article[0]['text_article']) ?></pre>
+                <p class="text"><? echo htmlspecialchars_decode($article[0]['text_article']) ?></p>
             </div>
         </div>
     </div>
@@ -57,7 +57,6 @@
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript">
         $(function() {
             $(window).scroll(function() { 
