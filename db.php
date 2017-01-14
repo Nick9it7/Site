@@ -1,4 +1,9 @@
 <?php
+
+/**
+ * @param $strQuery
+ * @return array
+ */
 	function select($strQuery) {
 		$mysqli = connect();
 		$res = $mysqli->query($strQuery);
